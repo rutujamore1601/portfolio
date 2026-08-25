@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import type { Variants } from 'framer-motion';
 import watermarkImg from '../assets/watermark.png';
+import resume from "../assets/resume.pdf";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -71,7 +72,7 @@ export const HeroSection: React.FC = () => {
           muted
           loop
           playsInline
-          className="h-screen w-auto max-w-none object-contain origin-right scale-95 md:scale-[0.98] lg:scale-100"
+          className="h-screen w-auto max-w-none object-contain origin-right scale-100 md:scale-[0.100] lg:scale-90"
         >
           <source
             src={`${import.meta.env.BASE_URL}videos/hero.mp4`}
@@ -237,7 +238,7 @@ export const HeroSection: React.FC = () => {
 
               {/* Download Resume Button */}
               <motion.a
-                href="/resume.pdf"
+                href={resume}
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={() => setIsHovered(true)}
